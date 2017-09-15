@@ -6,45 +6,46 @@
 ---
 
 <a name="getstarted"></a>
-> **`jQuery` 是一个跨浏览器的免费开源 `JavaScript` 库**。
-> 流行的 `jQuery` `JavaScript` 库有一个简洁便携的 `JavaScript` `API` 集合，用于快速的 `web` 开发，该库是经 `MIT` 和 `GPL` 许可的免费库。
-> `jQuery` 库是轻量级的（缩小/Gzip 压缩后仅 25KB）、`CSS3` 兼容且跨浏览器的。它提供一个丰富的 `API` 集合，包括 `HTML` `文档对象模型`（`DOM`）遍历和操作，可使用事件，且允许通过使用 `Asynchronous JavaScript` 和 `XML` (`Ajax`) 请求 `API` 进行服务器通信。除此之外，它也提供了网页动画和图像效果，以及一个功能强大的插件架构。
+> **`jQuery` 是一個跨瀏覽器的免費開源 `JavaScript` 庫**。
 
-> 其核心设计思想是“`写更少的代码，做更多的事情`”(`Write Less Do More`)。
+> 流行的 `jQuery` `JavaScript` 庫有一個簡潔便攜的 `JavaScript` `API` 集合，用於快速的 `web` 開發，該庫是經 `MIT` 和 `GPL` 許可的免費庫。
 
-> `jQuery` 提供了一套易于使用的 `API`。这些 `API` 极大地简化了客户端(浏览器)编程过程中的许多方面，包括：
-- `HTML` `DOM` 的遍历与操作
-- 浏览器事件处理
-- `AJAX`（`Asynchronous JavaScript And XML`）编程
-- 特效（如动画效果）
+> `jQuery` 庫是輕量級的（縮小/Gzip 壓縮後僅 25KB）、`CSS3` 相容且跨瀏覽器的。它提供一個豐富的 `API` 集合，包括 `HTML` `文件物件模型`（`DOM`）遍歷和操作，可使用事件，且允許通過使用 `Asynchronous JavaScript` 和 `XML` (`Ajax`) 請求 `API` 進行伺服器通訊。除此之外，它也提供>了網頁動畫和影象效果，以及一個功能強大的外掛架構。
 
-> 在直接使用 `JavaScropt`+`DHTML` 的传统客户端编程方式下，开发人员不得不编写冗长的代码。并且，为了使这些代码能够兼容不同的浏览器，我们还得编写额外的代码来处理这些跨浏览器问题。`jQuery` 的设计目标正是在于简化客户端编程。让我们能够编写简练的代码，节约开发时间，而这些代码却一样可以功能强大，并且兼容多种浏览器。
+> 其核心設計思想是“`寫更少的程式碼，做更多的事情`”(`Write Less Do More`)。
 
-> **`jQuery` 网站上提供了两种方式的发布文件。一种是内容经过压缩的文件；另一种是原始文件。前者文件中不包含代码注释以及代码运行过程中不需要的空白字符，它适合于生产环境(正式使用的环境)中使用，可以减少文件加载所需时间。后者文件中包含详细的代码注释，适合于开发和测试环境中使用。**
+> `jQuery` 提供了一套易於使用的 `API`。這些 `API` 極大地簡化了客戶端(瀏覽器)程式設計過程中的許多方面，包括：
+- `HTML` `DOM` 的遍歷與操作
+- 瀏覽器事件處理
+- `AJAX`（`Asynchronous JavaScript And XML`）程式設計
+- 特效（如動畫效果）
 
-> **`jQuery` 语法的设计思想是"选择元素，对其操作"。这和 `CSS` 规则的语法非常类似。**
+> 在直接使用 `JavaScropt`+`DHTML` 的傳統客戶端程式設計方式下，開發人員不得不編寫冗長的程式碼。並且，為了使這些程式碼能夠相容不同的瀏覽器，我們還得編寫額外的程式碼來處理這些跨瀏覽器問題。`jQuery` 的設計目標正是在於簡化客戶端程式設計。讓我們能夠編寫簡練的程式碼，節約開發時間，而這些程式碼卻一樣可以功能強大，並且相容多種瀏覽器。
 
-`jQuery` 的语法其实正是模仿了 `CSS` 规则的语法。其语法如下：
+> **`jQuery` 網站上提供了兩種方式的釋出檔案。一種是內容經過壓縮的檔案；另一種是原始檔案。前者檔案中不包含程式碼註釋以及程式碼執行過程中不需要的空白字元，它適合於生產環境(正式使用的環境)中使用，可以減少檔案載入所需時間。後者檔案中包含詳細的程式碼註釋，適合於開發和測試環境中使用。**
+
+> **`jQuery` 語法的設計思想是"選擇元素，對其操作"。這和 `CSS` 規則的語法非常類似。**
+
+`jQuery` 的語法其實正是模仿了 `CSS` 規則的語法。其語法如下：
 
 ```js
 $(selector).action(actionParameter);
 ```
 
-这是个链式语法。因此，上述的语法等效于：
+這是個鏈式語法。因此，上述的語法等效於：
 
 ```js
-var objTargetElements;//要施加操作的目标元素
-objTargetElements=$(selector);//指定目标元素
-//调用 objTargetElements 的相关方法，对目标元素进行操作
+var objTargetElements; //要施加操作的目標元素
+objTargetElements = $(selector); //指定目標元素
+//呼叫 objTargetElements 的相關方法，對目標元素進行操作
 objTargetElements.action(actionParameter);
 ```
 
-> $ ：美元符是 `jQuery` 核心函数 `jQuery` 的一个别名。当然，在 `JavaScript` 中“$”是一个合法的函数名。 Selector 参数指定了一个 `jQuery` 选择器。`jQuery` 选择器类似于 `CSS` 中的选择器，它告诉 `jQuery` 我们准备对哪些元素进行操作(action)。并且，`CSS` 中的各种选择器 `jQuery` 中都有等同的选择器。
+> $ ：美元符是 `jQuery` 核心函式 `jQuery` 的一個別名。當然，在 `JavaScript` 中“$”是一個合法的函式名。 Selector 引數指定了一個 `jQuery` 選擇器。`jQuery` 選擇器類似於 `CSS` 中的選擇器，它告訴 `jQuery` 我們準備對哪些元素進行操作(action)。並且，`CSS` 中的各種選擇器 `jQuery` 中都有等同的選擇器。
 
-> action ：该方法指定了要对 selector 所指定的元素进行什么具体操作。actionParameter 参数是个可选参数，是根据具体所指定的方法来定的，它会随具体方法的变化而变化。
+> action ：該方法指定了要對 selector 所指定的元素進行什麼具體操作。actionParameter 引數是個可選引數，是根據具體所指定的方法來定的，它會隨具體方法的變化而變化。
 
-
-##### 从本地站点引用 `jQuery`
+##### 從本地站點引用 `jQuery`
 ```html
 <html>
   <head>
@@ -57,7 +58,7 @@ objTargetElements.action(actionParameter);
 </html>
 ```
 
-##### 从 `CDN` 引用 `jQuery`
+##### 從 `CDN` 引用 `jQuery`
 ```html
 <html>
   <head>
@@ -78,7 +79,7 @@ objTargetElements.action(actionParameter);
     <script src="../js/lib/jQuery/1.9.1/jQuery.js"></script>
     <script>
       function initPage() {
-        //jQuery 代码：调用 jQuery 的核心函数－－－$函数
+        //jQuery 程式碼：呼叫 jQuery 的核心函式－－－$函式
         $("#message").html("Hello World, it is now:" + new Date().toLocaleString());
       }
     </script>
@@ -90,14 +91,14 @@ objTargetElements.action(actionParameter);
 </html>
 ```
 
-> initPage 这个函数会在页面加载完毕后被调用。而该函数在执行后会在 ID 为 message 的 HTML 结点内添加表示客户端当前时间的字符串。
+> initPage 這個函式會在頁面載入完畢後被呼叫。而該函式在執行後會在 ID 為 message 的 HTML 結點內新增表示客戶端當前時間的字串。
 
 ![](http://www.ibm.com/developerworks/cn/web/1311_huangwh_jqueryhandson/image007.jpg)
 
 ```html
 <a href="https://www.ibm.com/developerworks/cn/" target="_blank">IBM developerWorks 中文站</a><br/>
 <a href="https://www.ibm.com/developerworks" target="_blank">IBM developerWorks</a><br/>
-<a href="/" target="_blank">首页</a><br/>
+<a href="/" target="_blank">首頁</a><br/>
 ```
 
 ```js
@@ -121,21 +122,21 @@ a {
 
 
 ```js
-$("a").each(function() { //选择器表达式是"a"
+$("a").each(function() { //選擇器表示式是"a"
   $(this).css("fontSize", "25px");
 });
 ```
 
 ```js
 /*
-选择所有类为 amount 的元素
-each 方法会针对选择器所匹配的每个元素
-调用该方法的参数中所指定的函数。并将该
-元素作为函数调用的第二个实际参数。
+選擇所有類為 amount 的元素
+each 方法會針對選擇器所匹配的每個元素
+呼叫該方法的引數中所指定的函式。並將該
+元素作為函式呼叫的第二個實際引數。
 */
 $(".amount").each(function(i, ele) {
-  //设置元素的值为其当前值加上货币符号前缀
-  $(ele).val('￥' + $(ele).val());
+  //設定元素的值為其當前值加上貨幣符號字首
+  $(ele).val("￥" + $(ele).val());
 });
 ```
 
@@ -151,34 +152,35 @@ $("input[type=text]").css('background-color', 'yellow');
 ---
 
 ```js
-$(document).ready(initPage); //页面加载完毕后，jQuery 会回调 initPage
+$(document).ready(initPage); //頁面載入完畢後，jQuery 會回撥 initPage
 ```
 
 ```js
-$(function() { //该函数在页面加载完毕会被 jQuery 调用
-  //事件处理代码
+$(function() { //該函式在頁面載入完畢會被 jQuery 呼叫
+  //事件處理程式碼
 });
 ```
 ---
 
 ```js
-//当 ID 为 btnDetails 的按钮被单击时，下面的匿名函数会被 jQuery 调用
+//當 ID 為 btnDetails 的按鈕被單擊時，下面的匿名函式會被 jQuery 呼叫
 $("#btnDetails").bind("click", function() {
-  $("#divDetails").toggle(); //显示或者隐藏 ID 为 divDetails 的元素
+  $("#divDetails").toggle(); //顯示或者隱藏 ID 為 divDetails 的元素
 });
 ```
 
-> `bind` 方法的语法是：
-`event`：要处理的事件的名称。该名称不需要加前缀 on。
-`handler`：事件监听器，即对浏览器事件进行处理的函数。这通常是一个匿名函数。**在 `event` 参数所表示的事件被触发后，`jQuery` 会调用这个函数（即回调），并向该函数传入一个 `jQuery` 自定义的事件对象**。该事件对象是 `jQuery` 根据原始的浏览器事件对象创建的。`jQuery` 这么做是通过一个"中立"的事件对象来规避不同的浏览器所提供的同一个事件的事件对象的属性不同的问题。这使得我们可以用同样的代码处理事件，而不必关心不同浏览器所提供的原始事件对象的差异。
-`data` ：表示需要在事件触发后传递给事件监听器的额外数据。它是作为 `jQuery` 事件对象的 `data` 属性传递给事件监听器的。
+> `bind` 方法的語法是：
+`event`：要處理的事件的名稱。該名稱不需要加字首 on。
+`handler`：事件監聽器，即對瀏覽器事件進行處理的函式。這通常是一個匿名函式。**在 `event` 引數所表示的事件被觸發後，`jQuery` 會呼叫這個函式（即回撥），並向該函式傳入一個 `jQuery` 自定義的事件物件**。該事件物件是 `jQuery` 根據原始的瀏覽器事件物件建立的。`jQuery` 這麼做是通過
+一個"中立"的事件物件來規避不同的瀏覽器所提供的同一個事件的事件物件的屬性不同的問題。這使得我們可以用同樣的程式碼處理事件，而不必關心不同瀏覽器所提供的原始事件物件的差異。
+`data` ：表示需要在事件觸發後傳遞給事件監聽器的額外資料。它是作為 `jQuery` 事件物件的 `data` 屬性傳遞給事件監聽器的。
 
 ```js
 $("#txtVerifyCode").bind("keypress", function(evt) {
-  var keyCode = evt.which; //从事件对象中获取当前按键的编码值
-  var char = String.fromCharCode(keyCode); //将按键的编码转换为相应的字符
-  if (!/\d/.test(char)) { //当前输入的字符不是数字字符
-    //调用事件对象的 preventDefault 方法，取消事件的默认行为，此处即取消输入。
+  var keyCode = evt.which; //從事件物件中獲取當前按鍵的編碼值
+  var char = String.fromCharCode(keyCode); //將按鍵的編碼轉換為相應的字元
+  if (!/\d/.test(char)) { //當前輸入的字元不是數字字元
+    //呼叫事件物件的 preventDefault 方法，取消事件的預設行為，此處即取消輸入。
     evt.preventDefault();
   }
 });
@@ -187,20 +189,19 @@ $("#txtVerifyCode").bind("keypress", function(evt) {
 
 ```js
 function showTip(msg) {
-  $('#divTips').html(msg); //显示具体的提示内容
+  $("#divTips").html(msg); //顯示具體的提示內容
 }
 ```
 
 ```js
 function showTipHandler(evt) {
-  var data = evt.data; //获取额外参数
-  /*额外参数是一个我们根据需要的自定义对象。这里，我们假设这个对象有个 msg 属性。
-    它表示希望要显示的提示信息。
+  var data = evt.data; //獲取額外引數
+  /*額外引數是一個我們根據需要的自定義物件。這裡，我們假設這個物件有個 msg 屬性。
+    它表示希望要顯示的提示資訊。
   */
   var msg = data.msg;
   showTip(msg);
 }
-
 ```
 
 ```js
